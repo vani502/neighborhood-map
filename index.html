@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Map Project</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+<body>
+  <div class="container">
+    <div class="row">
+    <div class="sidebar" data-bind="css: {'toggle-menu': visibleLocations()}">
+      <header>
+        <h1>Chicago Attractions</h1>
+        <a class="close-icon" data-bind="click: toggleShow">&times;</a>
+      </header>
+      <div class="form-input">
+        <input type="search" id="search-input" placeholder="Filter attractions" data-bind="textInput: filterAttractions">
+      </div>
+      <ul class="locations-list" data-bind="foreach: attractions">
+        <li data-bind="text: title, click: $parent.showLocation,  visible: show"></li>
+      </ul>
+    </div>
+    <div class="main" data-bind="css: {'hide-sidebar': visibleLocations()}">
+      <div class="menu-header">
+        <button class="btn menu-icon" data-bind="click: toggleShow">&#9776;</button>
+      </div>
+      <div id="map"></div>
+    </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/lib/knockout-3.2.0.js"></script>
+  <script src="js/app.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmXCtEfA9UA9aLLKIdNfpGbLM2SjDf3ps&v=3&callback=initMap" onerror="mapError()">
+  </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  height: inherit;
+}
+
+.sidebar {
+  background-color: #f2f7f8;
+  border-right: 1px solid #d1e3e6;
+  position: relative;
+}
+
+.sidebar.toggle-menu {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: 0.5s;
+  top: 0;
+  width: 0;
+  z-index: 1;
+}
+
+h1 {
+  color: #525454;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 15px;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+
+.form-input {
+  padding: 0 15px;
+}
+
+.form-input input {
+  border: 1px solid #ccc;
+	border-radius: 4px;
+  font-size: .8em;
+  height: 32px;
+	padding: 5px 10px;
+  width: 100%;
+}
+
+.form-input input[type=search] {
+  -webkit-appearance: none;
+}
+
+ul.locations-list {
+	list-style: none;
+  padding-top: 15px;
+}
+
+.locations-list li {
+  color: #525454;
+  padding: 10px 15px;
+}
+
+.locations-list li:hover {
+  background-color: #efefef;
+}
+
+.location {
+  margin-bottom: 5px;
+}
+
+.main {
+  flex: 2.5 100%;
+  position: relative;
+}
+
+.main.hide-sidebar {
+  width: 100%;
+}
+
+.menu-header {
+  align-items: center;
+  background-color: #0198DD;
+  display: inline-flex;
+  height: 50px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.btn {
+  background-color: #c9302c;
+  border: 1px solid #761c19;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  padding: 3px 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.menu-icon {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.close-icon {
+  display: none;
+}
+
+#map {
+  bottom:0px;
+  left: 0;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}
+
+.main.hide-sidebar #map {
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none
+  }
+  .sidebar.toggle-menu {
+    display: block;
+    width: auto;
+  }
+  header {
+    display: flex;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .close-icon {
+    display: inline-flex;
+    font-size: 2em;
+    margin: -5px 5px 0 0;
+  }
+}
