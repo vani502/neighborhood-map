@@ -15,8 +15,8 @@ This application uses the below APIs and Frameworks:
 
 Download the application
 
-* Download and unzip [neighborhood-map-project.zip]()
-* Or you can use GitHub to fork and clone the repository
+* Download and unzip [neighborhood-map-project.zip](https://github.com/vani502/neighborhood-map/archive/master.zip)
+* Or you can use GitHub to fork and clone the repository(https://github.com/vani502/neighborhood-map.git)
 * After you have downloaded the files open index.html
 
 
